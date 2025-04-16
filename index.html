@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+        .container {
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        textarea, input[type=file], button {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Resume Analyzer</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label>Job Description</label><br>
+        <textarea name="job_description" rows="4" placeholder="Paste job description here..."></textarea><br>
+
+        <label>Upload Resume (.pdf or .txt)</label><br>
+        <input type="file" name="resume" accept=".pdf, .txt"><br>
+
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if submitted %}
+        <h2>Analysis Result</h2>
+
+        {% if no_skills_found %}
+            <p class="warning">No recognizable skills found in the job description. Please enter a valid description.</p>
+        {% endif %}
+
+        <p><strong>Skills required in Job Description:</strong></p>
+        {% if job_skills %}
+        <ul>
+            {% for skill in job_skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No recognizable skills found in job description.</p>
+        {% endif %}
+
+        <p><strong>Matched Skills in Resume:</strong></p>
+        {% if skills %}
+        <ul>
+            {% for skill in skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No matching skills found in resume.</p>
+        {% endif %}
+
+        <p><strong>Match Score:</strong> {{ score }}%</p>
+    {% endif %}
+</div>
+</body>
+</html>

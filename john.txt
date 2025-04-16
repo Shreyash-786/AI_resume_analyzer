@@ -1,0 +1,28 @@
+John Doe
+Email: johndoe@example.com
+Phone: +1 123-456-7890
+
+Professional Summary:
+Passionate software developer with hands-on experience in web development and backend technologies.
+
+Skills:
+- Python
+- Django
+- Flask
+- SQL
+- Git
+- REST APIs
+- JavaScript
+- Docker
+- C++
+- Penetration Testing
+
+Experience:
+Software Developer at XYZ Corp
+(June 2022 – Present)
+- Built RESTful APIs using Flask and Django
+- Worked with Docker containers and Git for version control
+
+Education:
+B.Tech in Computer Science
+ABC University, 2021

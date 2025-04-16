@@ -1,0 +1,28 @@
+Jane Smith  
+Email: janesmith@example.com  
+Phone: +1 987-654-3210  
+
+Professional Summary:  
+Detail-oriented computer science graduate with a strong foundation in software engineering and experience in full-stack development.  
+
+Skills:  
+- C  
+- C++  
+- Core Java  
+- Programming language fundamentals  
+- HTML/CSS  
+- Penetration Testing  
+- SQL  
+
+Experience:  
+Intern at SecureTech (Jan 2023 – Jun 2023)  
+- Assisted in vulnerability testing for internal web apps  
+- Wrote scripts in C++ to automate network scanning  
+
+Academic Projects:  
+- Built a library management system in Core Java  
+- Created a basic portfolio website using HTML and CSS  
+
+Education:  
+B.Sc. in Computer Science  
+XYZ University, 2023
